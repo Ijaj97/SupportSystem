@@ -14,6 +14,7 @@ import SupportHome from './components/pages/SupportHome';
 import AddTicket from './components/pages/AddTicket';
 import Assign from './components/pages/Assign';
 import TicketList from './components/pages/TicketList';
+import ResolveTicket from './components/pages/ResolveTicket';
 
 const Router = createBrowserRouter([
     {
@@ -39,6 +40,8 @@ const Router = createBrowserRouter([
 
             { path: '/about', element: <About /> },
             { path: '/contact', element: <Contact /> },
+
+            { path: '/resolve-ticket/:id', element: <ResolveTicket /> },
         ]
     }, {
         path: '*',

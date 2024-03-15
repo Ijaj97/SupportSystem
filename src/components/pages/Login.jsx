@@ -65,7 +65,6 @@ const Login = () => {
                 const userlogin = users.filter((data, k) => {
                     return data.email === email && data.password === password
                 });
-                console.log('userlogin :', userlogin);
 
                 if (userlogin.length === 0) {
                     toast.error('Invalid Details', {

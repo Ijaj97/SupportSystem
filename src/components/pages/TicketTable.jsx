@@ -4,14 +4,13 @@ import { Link, useParams } from 'react-router-dom';
 
 function TicketTable() {
     const [tickets, setTickets] = useState([]);
+
     const [users, setUsers] = useState([]);
     const role = localStorage.getItem('USER_ROLE');
     const id = localStorage.getItem('CURRENT_USERID');
-    console.log('id :', id);
 
     const loadTickets = async () => {
         const result = await axios.get("http://localhost:3003/tickets");
-        console.log('result :', result);
         if (role == 'admin') {
             setTickets(result.data.reverse());
         } else if (role == 'user') {
@@ -54,17 +53,20 @@ function TicketTable() {
                         <th scope="col">Subject</th>
                         <th scope="col">Message</th>
                         <th scope="col">Priority Level</th>
+                        <th>Resolve Message</th>
                         {role == 'admin' && <th scope="col">Assigned To</th>}
+                        <th>Resolved By</th>
                         <th >Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {tickets.length > 1 ? (tickets.map((ticket, index) => (
+                    {tickets.length >= 1 ? (tickets.map((ticket, index) => (
                         <tr key={index}>
                             <th scope="row">{index + 1}</th>
                             <td>{ticket.subject}</td>
                             <td>{ticket.message}</td>
                             <td>{ticket.level}</td>
+                            <td>{ticket.resolveMsg}</td>
                             {
                                 role == 'admin' && (
                                     <td>
@@ -78,6 +80,16 @@ function TicketTable() {
                                         }
                                     </td>
                                 )}
+                            <td>
+                                {
+                                    users && users.map((data) => {
+                                        return (
+                                            data.id == ticket.resolvedBy && data.name
+                                        )
+                                    })
+
+                                }
+                            </td>
                             <td className="d-flex justify-content-center">
                                 {
                                     role == 'admin' && (
@@ -96,13 +108,12 @@ function TicketTable() {
                                             Resolved
                                         </button>
                                     ) : (
-
-                                        <button
-                                            className="btn btn-danger"
-                                            onClick={() => resolveTicket(ticket)}
-                                        >
+                                        <Link
+                                            state={ticket}
+                                            to={`/resolve-ticket/${ticket.id}`}
+                                            className="btn btn-primary mr-2">
                                             Resolve
-                                        </button>
+                                        </Link>
                                     )
                                 }
                             </td>

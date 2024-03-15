@@ -44,7 +44,10 @@
       "level": "5",
       "usernameId": "10",
       "assignTo": "12",
-      "id": 1
+      "resolveMsg": "Ticket Resolved",
+      "resolvedBy": "12",
+      "id": 1,
+      "resolve": true
     },
     {
       "subject": "Mouse Problem ",
@@ -54,6 +57,17 @@
       "assignTo": "",
       "resolve": true,
       "id": 2
+    },
+    {
+      "subject": "Laptop keyboard Issue",
+      "message": "My laptop keyboard is not working",
+      "level": "8",
+      "usernameId": "10",
+      "assignTo": "13",
+      "resolveMsg": "keyboard Issue Solved",
+      "resolvedBy": "13",
+      "resolve": true,
+      "id": 3
     }
   ]
 }

@@ -21,7 +21,6 @@ function AddTicket() {
 
     const onSubmit = async (e) => {
         e.preventDefault();
-        console.log('ticket :', ticket);
         await axios.post("http://localhost:3003/tickets", ticket);
         navigate("/user");
     };

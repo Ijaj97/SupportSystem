@@ -19,7 +19,6 @@ function EditUser() {
   const loadUser = async () => {
     const result = await axios.get(`http://localhost:3003/users/${id}`);
     setUser(result.data);
-    console.log(result.data);
   };
   
   const { name, username, phone, email, password, role } = user;
