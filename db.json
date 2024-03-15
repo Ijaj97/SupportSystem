@@ -1,0 +1,59 @@
+{
+  "users": [
+    {
+      "name": "Rajesh Shinde",
+      "username": "rajesh",
+      "phone": "8446257830",
+      "email": "rajesh@gmail.com",
+      "password": "12345678",
+      "role": "user",
+      "id": 10
+    },
+    {
+      "name": "Admin",
+      "username": "admin",
+      "phone": "8446257830",
+      "email": "admin@gmail.com",
+      "password": "admin123",
+      "role": "admin",
+      "id": 11
+    },
+    {
+      "name": "Akshay Patil",
+      "username": "akshay",
+      "phone": "8446257830",
+      "email": "akshay@gmail.com",
+      "password": "12345678",
+      "role": "support",
+      "id": 12
+    },
+    {
+      "name": "Rohit Jadhav",
+      "username": "rohit",
+      "phone": "8446657266",
+      "email": "rohit@gmail.com",
+      "password": "12345678",
+      "role": "support",
+      "id": 13
+    }
+  ],
+  "tickets": [
+    {
+      "subject": "Mail not Working",
+      "message": "Unable to access Gmail",
+      "level": "5",
+      "usernameId": "10",
+      "assignTo": "12",
+      "id": 1
+    },
+    {
+      "subject": "Mouse Problem ",
+      "message": "Unable to use laptop Mouse, please resolve as soon as possible",
+      "level": "9",
+      "usernameId": "10",
+      "assignTo": "",
+      "resolve": true,
+      "id": 2
+    }
+  ]
+}
