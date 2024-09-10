@@ -68,6 +68,28 @@
       "resolvedBy": "13",
       "resolve": true,
       "id": 3
+    },
+    {
+      "subject": "ID Lost",
+      "message": "I had lost my ID. And Request to get a new ID card.",
+      "level": "5",
+      "usernameId": "10",
+      "assignTo": "12",
+      "resolveMsg": "New ID has been provided.",
+      "resolvedBy": "12",
+      "resolve": true,
+      "id": 4
+    },
+    {
+      "subject": "Internet Connection",
+      "message": "I'm unable to connect to internet",
+      "level": "7",
+      "usernameId": "10",
+      "assignTo": "12",
+      "resolveMsg": "We have resolved the internet issue",
+      "resolvedBy": "12",
+      "resolve": true,
+      "id": 5
     }
   ]
 }

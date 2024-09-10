@@ -37,7 +37,7 @@ function AddTicket() {
                         id="exampleInputName"
                         value={subject}
                         required
-                        aria-describedby="emailHelp"
+                        aria-describedby="subject"
                         placeholder="Enter Your Subject"
                         onChange={(e) => onInputChange(e)}
                     />
